@@ -11,6 +11,4 @@ the following operators to reassign the value in happyNum until it is equal to
   - ++
   - --*/
 
-  happyNum *= 2;
-  happyNum /= 2000; 
-  happyNum += 4; 
+  happyNum *= 2 /= 2000 += 4; 
