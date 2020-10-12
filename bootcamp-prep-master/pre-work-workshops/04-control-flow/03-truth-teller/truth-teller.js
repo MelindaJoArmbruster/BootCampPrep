@@ -6,3 +6,10 @@ let boolean1 = true, boolean2 = true;
 let result;
 
 // YOUR CODE BELOW
+if ((boolean1 === true) && (boolean2 === true)) {
+    result = 'both';
+} else if ((boolean1 === true) || (boolean2 === true)) {
+    result = 'one';
+} else {
+    result = 'none';
+}
