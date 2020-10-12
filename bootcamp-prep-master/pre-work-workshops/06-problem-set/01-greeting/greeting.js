@@ -1,9 +1,9 @@
 // YOUR CODE BELOW
-let name = "";
+
 function greeting (name) {
-    if (name !== undefined) {
-        return "Hello " + name;
+       if (!name) {
+        return "Hello!";
     } else {
-        return "Hello";
+        return "Hello " + name + "!";
     }
 }
