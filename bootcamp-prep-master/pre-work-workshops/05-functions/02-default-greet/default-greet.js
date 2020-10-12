@@ -3,7 +3,9 @@
 //`defaultGreet` should return a string greeting for the given names. If the user
 //does not define a last name, assume the last name is 'Doe'.
 function defaultGreet (firstName, lastName) {
-    if (!lastName) lastName = "Doe";
+    if (!lastName) {
+        lastName = "Doe";
+    }
     return "Hi " + firstName + " " + lastName + "!";
 }
 
