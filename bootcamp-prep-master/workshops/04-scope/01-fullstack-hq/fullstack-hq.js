@@ -1,5 +1,5 @@
-// Edit the code below
-let place = 'Planet Earth';
+// Edit the code below NOTE FROM MJ: commented out original code, my solution is below original
+/*let place = 'Planet Earth';
 
 function fullstackHQ(){
   return middleFunction('United States');
@@ -13,6 +13,26 @@ function fullstackHQ(){
 
       function innermostFunction() {
         return 'Fullstack HQ is at ' + place + ', ' + place + ', ' + place + ', ' + place;
+      }
+    }
+  }
+}
+
+*/
+let planet = 'Planet Earth';
+
+function fullstackHQ(){
+  return middleFunction('United States');
+
+  function middleFunction(country) {
+    return innerFunction('New York State');
+
+    function innerFunction(state) {
+      city = 'New York City';
+      return innermostFunction();
+
+      function innermostFunction() {
+        return 'Fullstack HQ is at ' + planet + ', ' + country + ', ' + state + ', ' + city;
       }
     }
   }
