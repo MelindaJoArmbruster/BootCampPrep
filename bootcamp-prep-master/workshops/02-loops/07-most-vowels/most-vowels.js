@@ -1,14 +1,15 @@
 function mostVowels(str) {
-    let vowels = [a,e,i,o,u,A,E,I,O,U];
+    let vowels = ['a','e','i','o','u','A','E','I','O','U'];
     let arrStr = str.split(' ');
     let bestCount = 0;
-    let bestWord;
+    let bestWord = '';
+    let vowelCount = 0;
 
     for (let i = 0; i < arrStr.length; i++) {
-        const word = arrStr[i];
-        let vowelCount = 0;
+        let word = arrStr[i];
+        vowelCount = 0;
         for (let k = 0; k < word.length; k++) {
-            const char = word[k];
+            let char = word[k];
             if(vowels.includes(char)) {
                 vowelCount++;
             }
@@ -19,7 +20,7 @@ function mostVowels(str) {
         }
     }
     if (vowelCount = 0) {
-        return ' ';
+        bestWord = '';
     }
-    return bestWord;
+    return bestWord.replace(/[.?]/g, '');
 }
