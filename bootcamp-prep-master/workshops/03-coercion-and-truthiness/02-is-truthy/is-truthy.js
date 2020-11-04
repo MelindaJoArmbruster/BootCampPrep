@@ -1,7 +1,9 @@
+
 function isTruthy(arg) {
     if (typeof arg == 'boolean' && arg === true) return true;
     if (typeof arg == 'number' && arg > 0) return true;
     if (typeof arg == 'string' && arg !== '') return true;
+    
     if (typeof arg == 'boolean' && arg === false) return 'The boolean value false is falsey';
     if (typeof arg == 'object' && arg === null) return 'The null value is falsey';
     if (typeof arg == 'undefined') return 'undefined is falsey';

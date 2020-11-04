@@ -15,7 +15,7 @@ function goldFinger(bond) {
   return AgentinScope === prediction;
 }
 
-
+//This one is particularly confusing/////////
 function scaramanga(target) {
   target = bond;
   let AgentinScope = (bond === '007');

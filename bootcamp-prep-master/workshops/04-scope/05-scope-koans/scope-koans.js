@@ -2,6 +2,7 @@
 let testOneMessage = 'test failing';
 
 function testOne() {
+  testOneMessage = 'test succeeding';
   return testOneMessage;
 }
 
@@ -17,7 +18,7 @@ function testTwo() {
 
 function helperFunc(a) {
   testTwoMessage = 'test succeeding';
-  return testTwoMessage;
+  return a;
 }
 
 
@@ -33,7 +34,7 @@ function testThree(testThreeMessage) {
   return msg;
 
   function getMessage(value) {
-    if (value) {
+    if (!value) {//I added the ! to this line, that's my only change to the code//
       return testThreeMessage;
     }
 
@@ -46,11 +47,12 @@ function testThree(testThreeMessage) {
 let testFourMessage = 'test succeeding';
 
 function testFour(msg) {
+  debugger;
   function innerFunc(msg) {
     msg = msg
 
     function doubleInner(msg) {
-      testFourMessage = msg;
+      testFourMessag = msg; //change testFourMessage to stop overwriting the initialized value
       return testFourMessage;
     }
 
