@@ -16,8 +16,8 @@ function testTwo() {
 }
 
 function helperFunc(a) {
-  a = 'test succeeding';
-  return a;
+  testTwoMessage = 'test succeeding';
+  return testTwoMessage;
 }
 
 
