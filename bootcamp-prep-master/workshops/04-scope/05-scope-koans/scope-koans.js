@@ -47,7 +47,7 @@ function testThree(testThreeMessage) {
 let testFourMessage = 'test succeeding';
 
 function testFour(msg) {
-  debugger;
+
   function innerFunc(msg) {
     msg = msg
 
