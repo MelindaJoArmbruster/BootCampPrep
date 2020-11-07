@@ -1,8 +1,8 @@
 function removeColumns(originalGrid, numColumns) {
     let newGrid = [];
     for (let i = 0; i < originalGrid.length; i++){
-        let remaining = originalGrid[i].splice(-numColumns, numColumns);
-        newGrid.push(remaining);
+        
+    
     }
     return newGrid;
 }
