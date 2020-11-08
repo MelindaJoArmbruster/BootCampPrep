@@ -1,5 +1,7 @@
 function arrayFlattener(arr) {
-    let flatArray = arr.flat(2);
+    if (typeof arr != 'object') {   //had to add this to fix error when arr = string
+        return [arr];
+    }
+    let flatArray = arr.flat();
     return flatArray;
 }
-//I don't know why this flattener isn't passing one of the tests
