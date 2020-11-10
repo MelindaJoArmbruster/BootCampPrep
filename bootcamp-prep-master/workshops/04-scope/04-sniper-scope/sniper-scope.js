@@ -35,7 +35,6 @@ function drNo() {
 function jaws(agent) {
   agent = bond;
   bond = "Body Double";
-
   let AgentinScope = agent === "007";
   let prediction = true; // YOUR BOOLEAN PREDICTION HERE
 
@@ -44,6 +43,7 @@ function jaws(agent) {
 
 function elChiffre() {
   let agent = bond;
+  console.log(bond);
   bond = "Body Double";
   let AgentinScope = agent === "007";
   let prediction = false; // YOUR BOOLEAN PREDICTION HERE
