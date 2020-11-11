@@ -16,6 +16,6 @@ the type of the value tested.
 ```
 
 ```javascript
-isTruthy('I yearn for truth'); // => true
+isTruthy("I yearn for truth"); // => true
 isTruthy(null); // => The null value is falsey
 ```
