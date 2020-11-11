@@ -15,7 +15,5 @@ function zooInventory(myZoo) {
   for (let i = 0; i < myZoo.length; i++) {
     newArr.push(`${myZoo[i][0]} the ${myZoo[i][1][0]} is ${myZoo[i][1][1]}.`);
   }
-
-  console.log(newArr);
   return newArr;
 }

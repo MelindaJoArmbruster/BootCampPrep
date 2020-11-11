@@ -1,24 +1,17 @@
-/*function arrayFlattener(arr) {
-    if (typeof arr != 'object') {   //had to add this to fix error when arr = string
-        return [arr];
-    }
-    let flatArray = arr.flat();
-    return flatArray;
-}
-*/
-
-//ALTERNATE SOLUTION:
-
 function arrayFlattener(arr) {
-  let flatArray = [];
+  let flatArray = []; //declare empty array to accept elements
 
   for (let i = 0; i < arr.length; i++) {
-    let element = arr[i];
+    //loop thru elements of outer array
+    let element = arr[i]; //assign each element of outer array to the variable element
     if (Array.isArray(element)) {
+      //if the given element is an array,
       for (let j = 0; j < element.length; j++) {
-        flatArray.push(element[j]);
+        //cycle thru its contents
+        flatArray.push(element[j]); //pushing each into the resultant array we declared earlier
       }
     } else {
+      //othervise, the element isn't an array so just push it as-is into flatArray
       flatArray.push(element);
     }
   }

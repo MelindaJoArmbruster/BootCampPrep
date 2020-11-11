@@ -66,17 +66,6 @@ for (let i = 0; i < letters.length; i++) {
   //the letter key inside the leetCodex object
 }
 
-/*
-function leetTranslator(s) {
-  let sArray = s.toLowerCase().split("");
-  let rArray = [];
-  for (let i = 0; i < sArray.length; i++) {
-    if (leetCodex[sArray[i]]) rArray[i] = leetCodex[sArray[i]];
-    else rArray[i] = sArray[i];
-  }
-  return rArray.join("");
-}
-*/
 function leetTranslator(str) {
   strLC = str.toLowerCase(); //made the string lowercase
   let rString = ""; //declared an empty resultant string
@@ -84,7 +73,7 @@ function leetTranslator(str) {
     //cycled thru each char of the string
     if (leetCodex[strLC[i]]) rString += leetCodex[strLC[i]];
     //if char/key is found in Codex, add to result string
-    else rString += strLC[i]; //otherwise, just add the char as is in original (lc) string
+    else rString += strLC[i]; //otherwise, just add the char as-is in original (lc) string
   }
   return rString;
 }

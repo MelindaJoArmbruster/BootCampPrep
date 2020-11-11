@@ -1,13 +1,19 @@
 function compareObjects(obj1, obj2) {
-  let keysObj1 = Object.keys(obj1);
-  let keysObj2 = Object.keys(obj2);
-  if (keysObj1.length != keysObj2.length) return false;
-  for (let i = 0; i < keysObj1.length; i++) {
-    if (keysObj1[i] != keysObj2[i]) return false;
-    if (obj1[keysObj1[i]] != obj2[keysObj2[i]]) return false;
+  for (let key in obj1) {
+    //loop thru keys in obj1
+    if (obj1[key] !== obj2[key]) {
+      //if the value of any key is different, return false
+      return false;
+    }
   }
-
-  return true;
-
-  //return JSON.stringify(obj1) === JSON.stringify(obj2) ? true : false;
+  for (let key in obj2) {
+    //loop thru keys in obj2
+    if (obj2[key] !== obj1[key]) {
+      //if the value of any key is different, return false
+      return false;
+    }
+  }
+  return true; //if we got to this step, key/value pairs match
 }
+
+//return JSON.stringify(obj1) === JSON.stringify(obj2) ? true : false;
