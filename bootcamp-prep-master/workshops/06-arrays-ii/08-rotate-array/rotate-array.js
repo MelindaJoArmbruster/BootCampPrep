@@ -1,4 +1,4 @@
-function rotateArray(originalArray, rotateNum) {
+/*function rotateArray(originalArray, rotateNum) {
     let rotated = [];
     if (rotateNum === 0) {
         return originalArray;
@@ -13,4 +13,11 @@ function rotateArray(originalArray, rotateNum) {
     }
     return rotated;
 }
-//rotateArray(['first', 'second', 'third', 'fourth'], 1);
+*/
+
+function rotateArray(originalArray, rotateNum) {
+  let front = originalArray.slice(-rotateNum);
+  let end = originalArray.slice(0, -rotateNum);
+
+  return front.concat(end);
+}
