@@ -38,27 +38,23 @@ let classRoom = [
 ];
 
 function attendanceCheck(day) {
-  let inAttendance = [];
+  let inAttendance = []; //declare an empty array to receive student names
 
   for (let i = 0; i < classRoom.length; i++) {
-    let currentStudent = classRoom[i];
-    let studentArrayOfKey = Object.keys(currentStudent);
-    let studentName = studentArrayOfKey[0];
-    let arrayOfDays = currentStudent[studentName];
+    // cycle thru classRoom array
+    let currentStudent = classRoom[i]; // set the individual elements in classRoom array to currentstudent Object
+    let studentName = Object.keys(currentStudent)[0]; // set the only key for that student to the student's name
+    let arrayOfDays = currentStudent[studentName]; // set the value of the student's name to be an array of objects (days)
+
     for (let j = 0; j < arrayOfDays.length; j++) {
-      let dayOfWk = Object.keys(arrayOfDays[j])[0];
-      let attended = arrayOfDays[j][dayOfWk];
+      // cycle thru the elements (objects) of the inner array
+      let dayOfWk = Object.keys(arrayOfDays[j])[0]; // set the only key for each object to the day of the week
+      let attended = arrayOfDays[j][dayOfWk]; // set the value (boolean) of that day of the week to variable (attended)
       if (dayOfWk === day && attended === true) {
-        inAttendance.push(studentName);
+        //if the day of the week is equal the day we were passed and the value is true,
+        inAttendance.push(studentName); // push that student's name into the array of those in attendance
       }
     }
   }
   return inAttendance;
 }
-//cycle thru classRoom array
-//for each object in the array, get the only key(name)
-//the value of that key is an array
-//cycle thru the array of objects to get the object with the
-//key = day we are looking for
-//evaluate the boolean for that day
-//if true, add to resultant array

@@ -23,6 +23,13 @@ let negTestCase = [
 ];
 
 function validSolution(board) {
+  //Helper Function
+  function test(testArray) {
+    return testArray.sort((a, b) => a - b).join("") === "123456789" //take the array to be tested, sort it numerically, make it into a string, then compare to reference string
+      ? true //if tested array (now a string) is exactly the same, the tested array is valid so return true
+      : false; //if tested array (now a string) isn't exactly the same, the tested array is not valid so return false
+  }
+
   //Test Rows
   let copyBoard = board.map((a) => a.slice()); //create deep copy
   for (let i = 0; i < 9; i++) {
@@ -56,13 +63,6 @@ function validSolution(board) {
       }
       if (test(tempArr) === false) return false; //test each temp array with helper function
     }
-  }
-
-  //Helper Function
-  function test(testArray) {
-    return testArray.sort((a, b) => a - b).join("") === "123456789" //take the array to be tested, sort it numerically, make it into a string, then compare to reference string
-      ? true //if tested array (now a string) is exactly the same, the tested array is valid so return true
-      : false; //if tested array (now a string) isn't exactly the same, the tested array is not valid so return false
   }
   return true; // you end up here when the row tests, the column tests, and the square tests have all passed, so whole board must be truly valid
 }
