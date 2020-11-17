@@ -42,14 +42,14 @@ function attendanceCheck(day) {
 
   for (let i = 0; i < classRoom.length; i++) {
     // cycle thru classRoom array
-    let currentStudent = classRoom[i]; // set the individual elements in classRoom array to currentstudent Object
-    let studentName = Object.keys(currentStudent)[0]; // set the only key for that student to the student's name
-    let arrayOfDays = currentStudent[studentName]; // set the value of the student's name to be an array of objects (days)
+    let currStudentObj = classRoom[i]; // set the individual elements in classRoom array to currentstudent Object
+    let studentName = Object.keys(currStudentObj)[0]; // set the only key for that student to the student's name
+    let arrayOfDayObjs = currStudentObj[studentName]; // set the value of the student's name to be an array of objects (days)
 
-    for (let j = 0; j < arrayOfDays.length; j++) {
+    for (let j = 0; j < arrayOfDayObjs.length; j++) {
       // cycle thru the elements (objects) of the inner array
-      let dayOfWk = Object.keys(arrayOfDays[j])[0]; // set the only key for each object to the day of the week
-      let attended = arrayOfDays[j][dayOfWk]; // set the value (boolean) of that day of the week to variable (attended)
+      let dayOfWk = Object.keys(arrayOfDayObjs[j])[0]; // set the only key for each object to the day of the week
+      let attended = arrayOfDayObjs[j][dayOfWk]; // set the value (boolean) of that day of the week to variable (attended)
       if (dayOfWk === day && attended === true) {
         //if the day of the week is equal the day we were passed and the value is true,
         inAttendance.push(studentName); // push that student's name into the array of those in attendance

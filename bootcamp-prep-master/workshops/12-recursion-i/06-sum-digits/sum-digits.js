@@ -1,4 +1,14 @@
 function sumDigits(num) {
+  let stringNum = String(num);
+  if (stringNum.length === 1) {
+    return num;
+  }
+  let sum = 0;
+  sum += Number(stringNum[0]) + sumDigits(Number(stringNum.slice(1)));
+  return sum;
+}
+
+/*function sumDigits(num) {
   if (num < 10) {
     //if we are down to a single digit
     return num; // return that number
@@ -7,7 +17,7 @@ function sumDigits(num) {
     return (num % 10) + sumDigits(Math.floor(num / 10)); // function again while reducing the number
   }
 }
-
+*/
 /*
 function sumDigits(number) {
   // coerce the number to a string
