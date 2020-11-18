@@ -12,3 +12,16 @@ function theTruthCounts(arr) {
   }
   return count;
 }
+
+/*
+function theTruthCounts(arr) {
+  let flatArr = arr.flat(Infinity);
+  let count = 0;
+  for (let i = 0; i < flatArr.length; i++) {
+    if (flatArr[i]) {
+      count++;
+    }
+  }
+  return count;
+}
+*/
