@@ -36,6 +36,7 @@ function countVowels(string) {
 
   // if the first letter is a vowel...
   if (isAVowel(string[0])) {
+    // or let vowels = "aeiou" (outside the if) then check if vowels.includes(string[0])
     numVowels += 1;
   }
   numVowels += countVowels(string.slice(1));
