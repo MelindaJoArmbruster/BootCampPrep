@@ -1,4 +1,30 @@
 function mostVowels(str) {
+  //split str into arr
+  let vowels = "aeiouAEIOU";
+  let strArr = str.split(" ");
+  let largestVowelCount = 0;
+  let largestVowelWord = "";
+  //cycle thru ea elem of arr
+  for (let i = 0; i < strArr.length; i++) {
+    let currWord = strArr[i];
+    let currVowelCount = 0;
+
+    for (let k = 0; k < currWord.length; k++) {
+      let currChar = currWord[k];
+      if (vowels.includes(currChar)) {
+        currVowelCount++;
+      }
+    }
+    if (currVowelCount > largestVowelCount) {
+      largestVowelCount = currVowelCount;
+      largestVowelWord = currWord;
+    }
+  }
+  return largestVowelWord;
+}
+
+/*
+function mostVowels(str) {
     let vowels = ['a','e','i','o','u','A','E','I','O','U'];
     let arrStr = str.split(' ');
     let bestCount = 0;
@@ -24,7 +50,7 @@ function mostVowels(str) {
     }
     return bestWord.replace(/[.?]/g, '');
 }
-
+*/
 /* 
 FSA Solution:
 

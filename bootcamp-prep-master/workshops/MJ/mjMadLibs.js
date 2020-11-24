@@ -4,7 +4,7 @@ let testWords = ["took", "tulip"];
 function madLibs(str, wordArr) {
   let result = "";
   let strArr = str.split("*");
-  for (let i = 0; i < strArr.length; i++) {
+  for (let i = 0; i < strArr.length - 1; i++) {
     let currSeg = strArr[i];
     result += currSeg;
     if (currSeg !== strArr[strArr.length - 1]) {
