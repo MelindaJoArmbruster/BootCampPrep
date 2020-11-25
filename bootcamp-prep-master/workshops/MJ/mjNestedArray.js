@@ -1,3 +1,4 @@
+/*
 function nestingBird(arr) {
   let result = "";
   for (let i = 0; i < arr.length; i++) {
@@ -11,8 +12,8 @@ function nestingBird(arr) {
   return result;
 }
 console.log(nestingBird(["r", "o", ["b", ["i"], "n"]]));
+*/
 
-/* THIS SOLUTION WAS NOT WORKING FOR SOME REASON
 function nestingBird(arr) {
   let result = "";
   let flatArr = arr.flat(Infinity);
@@ -22,4 +23,3 @@ function nestingBird(arr) {
   return result;
 }
 console.log(nestingBird(["r", "o", ["b", ["i"], "n"]]));
-*/

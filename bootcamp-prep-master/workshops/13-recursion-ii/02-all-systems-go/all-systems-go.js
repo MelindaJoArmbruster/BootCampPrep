@@ -1,5 +1,22 @@
 function allSystemsGo(systems) {
   for (let key in systems) {
+    let value = systems[key];
+    if (typeof value === "object") {
+      let subs = allSystemsGo(value);
+      if (subs === false) {
+        return false;
+      }
+    }
+    if (value === false) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/*
+function allSystemsGo(systems) {
+  for (let key in systems) {
     // cycle thru the keys in the systems object
     let value = systems[key]; // declare the value of each key as 'value'
     if (typeof value === "object") {
@@ -16,7 +33,7 @@ function allSystemsGo(systems) {
   } //if we got thru the above tests without a false, all systems are a go
   return true;
 }
-
+*/
 /*
 function allSystemsGo(systems) {
   for (let key in systems) {
