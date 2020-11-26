@@ -1,3 +1,22 @@
+function myJoin(arr, sep) {
+  if (!sep) {
+    sep = ",";
+  }
+  let result = "";
+  for (let i = 0; i < arr.length; i++) {
+    let currElem = arr[i];
+    if (!currElem) {
+      currElem = "";
+    }
+    result += currElem;
+    if (i !== arr.length - 1) {
+      result += sep;
+    }
+  }
+  return result;
+}
+
+/*
 function myJoin(arr, separator = ",") {
   let str = ""; //declare empty string to receive array elements
   for (let i = 0; i < arr.length; i++) {
@@ -7,3 +26,4 @@ function myJoin(arr, separator = ",") {
   }
   return str;
 }
+*/

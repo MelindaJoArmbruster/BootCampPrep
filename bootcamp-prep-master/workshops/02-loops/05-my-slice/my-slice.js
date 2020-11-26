@@ -1,3 +1,11 @@
+function mySlice(str, start = 0, end = str.length) {
+  let result = "";
+  for (let i = start; i < end; i++) {
+    result += str[i];
+  }
+  return result;
+}
+
 /*function mySlice(str, start, end) {
     if (!end) {
         return str.substr(start);
@@ -9,6 +17,7 @@
 }*/
 //Solution 2: Uses default parameters for the optional ones
 
+/*
 const mySlice = (str, start, end) => {
   let slicedString = "";
   if (start === undefined && end === undefined) {
@@ -26,7 +35,7 @@ const mySlice = (str, start, end) => {
   }
   return slicedString;
 };
-
+*/
 //Solution 3:
 /*
 function mySlice(originalString, startIdx, endIdx) {

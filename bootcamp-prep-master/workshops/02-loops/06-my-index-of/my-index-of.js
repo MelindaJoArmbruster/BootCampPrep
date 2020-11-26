@@ -1,20 +1,21 @@
+/*
 function myIndexOf(source, searchValue, startIdx) {
-    if (source.includes(searchValue) === false) {
+  if (source.includes(searchValue) === false) {
+    return -1;
+  } else {
+    if (startIdx > 0) {
+      const partSource = source.slice(startIdx);
+      if (partSource.search(searchValue) >= 0) {
+        return startIdx + partSource.search(searchValue);
+      } else {
         return -1;
-    } else {
-        if (startIdx > 0) {
-            const partSource = source.slice(startIdx);
-            if (partSource.search(searchValue) >= 0) {
-                return (startIdx + (partSource.search(searchValue)));
-            } else {
-                return -1;
-            }
-        }
-        
-        return source.search(searchValue);
+      }
     }
-}
 
+    return source.search(searchValue);
+  }
+}
+*/
 /*
 Alternate Solution 1:
 
@@ -74,3 +75,13 @@ function myIndexOf2(source, searchValue, startIdx=0) {
   return -1;
 }
 */
+
+function myIndexOf(str, searchValue, startIndex = 0) {
+  for (let i = startIndex; i < str.length; i++) {
+    let substring = str.slice(i, i + searchValue.length);
+    if (substring === searchValue) {
+      return i;
+    }
+  }
+  return -1;
+}
